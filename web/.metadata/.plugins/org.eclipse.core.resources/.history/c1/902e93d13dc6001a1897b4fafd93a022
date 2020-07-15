@@ -1,0 +1,48 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<title>Blank</title>
+<link rel="stylesheet" href="css/base.css">
+</head>
+
+<body id = "bd_1">
+	<div class="title">Blank</div>
+	<div class="line"></div>
+	<button id = "b_1" onclick="add_control()">点击</button>
+	<p id = 'p_1'></p>
+</body>
+<script>
+
+function plus(){
+	
+	var result = Number(document.getElementById("i_1").value) + Number(document.getElementById("i_2").value);
+	
+	document.getElementById("p_1").innerHTML = result;
+}
+
+function add_control(){
+	
+	var input_1 = document.createElement("input");
+	input_1.id = "i_1";
+	var input_2 = document.createElement("input");
+	input_2.id = "i_2";
+	var br_1 = document.createElement("br");
+	var br_2 = document.createElement("br");
+	var button_2 = document.createElement("button");
+	button_2.innerHTML = "点击";
+	button_2.onclick = plus;
+	
+	var bd_1 = document.getElementById("bd_1");
+	bd_1.appendChild(input_1);
+	bd_1.appendChild(br_2);
+	bd_1.appendChild(input_2);
+	bd_1.appendChild(br_1);
+	bd_1.appendChild(button_2);
+	
+}
+
+</script>
+</html>

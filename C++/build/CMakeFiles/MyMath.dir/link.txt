@@ -1,0 +1,1 @@
+/usr/bin/c++.exe  -g -std=c++11   -shared -Wl,--enable-auto-import -o ../output/cygMyMath.dll -Wl,--out-implib,../output/libMyMath.dll.a -Wl,--major-image-version,0,--minor-image-version,0 CMakeFiles/MyMath.dir/thirdparty/MathFunctions.cpp.o 

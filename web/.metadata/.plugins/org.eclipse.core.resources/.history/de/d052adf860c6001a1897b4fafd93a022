@@ -1,0 +1,46 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<title>Blank</title>
+<link rel="stylesheet" href="css/base.css">
+</head>
+
+<body>
+	<div class="title">Blank</div>
+	<div class="line"></div>
+	<div class="display">
+		<audio id="audio">
+			<source src="./res/audio/1.mp3" type="audio/mp3">
+		</audio>
+		<button onclick="palyMusic()">播放音频</button>
+	</div>
+	<div class="display">
+		<img id=img></img>
+		<button onclick="displayPicture()">显示图片</button>
+	</div>
+	<div class="display">
+		<video id = "video">
+			<source src="./res/video/1.mp4" type = "video/mp4">
+		</video>
+		<button onclick="">播放视频</button>
+	</div>
+</body>
+<script>
+	
+	function displayPicture(){
+		
+		var img = document.getElementById("img");
+		img.src = "./res/img/appicon.png"
+	}
+	const palyMusic = () => {
+		document.getElementById("audio").play();
+	}
+	
+	const platVideo = () => {
+		document.getElementById("video").play
+	}
+</script>
+</html>

@@ -1,0 +1,25 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<title>Blank</title>
+<link rel="stylesheet" href="css/base.css">
+</head>
+
+<body>
+	<div class="title">Blank</div>
+	<div class="line"></div>
+	<button id = "b_1" onclick="add()">点击</button>
+</body>
+<script>
+
+function add(){
+	document.createElement("br");
+	var b_2 = document.createElement("button");
+	b2.innerHTML = "点击";
+}
+
+</script>
+</html>

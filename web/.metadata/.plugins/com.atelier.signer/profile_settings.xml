@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<security default="default">
+  <profile name="default" id="0">
+    <developer id="0" identifier="uAhPc3HqRU7+UHLjZGNDup5yhzsEx3E8/1IViVk+JpSjUHKwkluMTUajfYw0nqvG9zpjML0qVpBMwMQB4fPrxQ==" name="default" code="mfHE/nMMcew+QKXrsoaEFCL75Iy/EaHt4Kh6fn088aM="/>
+  </profile>
+</security>

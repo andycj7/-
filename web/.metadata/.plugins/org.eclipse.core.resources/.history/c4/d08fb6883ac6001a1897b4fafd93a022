@@ -1,0 +1,28 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<title>Blank</title>
+<link rel="stylesheet" href="css/base.css">
+</head>
+
+<body id = "bd_1">
+	<div class="title">Blank</div>
+	<div class="line"></div>
+	<button id = "b_1" onclick="add()">点击</button>
+	<p id = 'p1'></p>
+</body>
+<script>
+
+function add(){
+	document.getElementById("p1").innerHTML = "1";
+	document.createElement("br");
+	var b_2 = document.createElement("button");
+	b2.innerHTML = "点击";
+	b2.class = "b1";
+}
+
+</script>
+</html>

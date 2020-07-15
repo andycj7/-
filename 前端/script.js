@@ -8,3 +8,15 @@ var change = (function myFunction(){
 		obj.src = path + index + ".jpg";
 	}
 })();
+
+function strPractice() {
+	var str = document.getElementById("str").value;
+	var strVec = str.split(",");
+	var result="";    //变量一定要初始化
+	for( i in strVec) 
+		result +=  strVec[i] + ".";
+	
+	document.getElementById("display").innerHTML = result;
+}
+
+strPractice();
