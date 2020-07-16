@@ -1,0 +1,21 @@
+{
+   "name":"IDCardDiscern",
+   "version":"0.1.0",
+   "description":"Simple web example application to demonstrate",
+   "icons":[
+      {
+         "name":"launcher",
+         "src":"res/icon/appicon.png"
+      }
+   ],
+   "package":"com.example.idcarddiscern",
+   "start_url":"index.html",
+   "request-permissions":[
+      "atelier.permission.NFC_CONTROL"
+   ],
+   "developer":{
+      "name":"Example Developer",
+      "url":"http://www.example.com/",
+      "email":"developer@example.com"
+   }
+}

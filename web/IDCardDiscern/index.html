@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>idcarddiscern</title>
+  <link href="lib/ionic.min.css" rel="stylesheet">
+  <link href="res/styles/hdpi/idcarddiscern.css" rel="stylesheet">
+  <script src="lib/jquery.min.js"></script>
+  <script src="js/idcarddiscern.js"></script>
+</head>
+<body>
+<div id="idcarddiscern">
+    <header class="bar bar-header">
+      <h1 class="title">身份证识别</h1>
+    </header>
+    <div class="item-title">
+      <span>* 身份证识别功能需要开启NFC，当前状态: </span>
+      <span id="nfcTip">关闭！</span>
+    </div>
+    <div class="item item-toggle item-icon-left">
+      <div class="childTitle">
+        <span>身份识别</span>
+      </div>
+      <div class="tips">
+        <span id="openTips">已关闭</span>
+      </div>
+      <label class="toggle">
+        <input type="checkbox" id="discernOpen" disabled="disabled">
+        <span class="track">
+          <span class="handle"></span>
+        </span>
+      </label>
+    </div>
+    <div class="cardInfo" id="showGetedInfo"></div>
+    <div class="actionInfo">
+      <span class="showMessage" id="watchMessage">操作提示：请先开启NFC功能！</span>
+    </div>
+</div>
+
+</body>
+</html>

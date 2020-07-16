@@ -1,0 +1,1 @@
+/usr/bin/c++.exe  -g -std=c++11  -Wl,--enable-auto-import CMakeFiles/MyMath.dir/main.cpp.o  -o output/MyMath.exe -Wl,--out-implib,output/libMyMath.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -L/cygdrive/c/Users/Andy/Desktop/空天院/CMake/./output -Wl,-Bstatic -lMyMath -Wl,-Bdynamic 
