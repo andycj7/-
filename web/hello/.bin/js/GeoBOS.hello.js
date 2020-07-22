@@ -1,0 +1,1 @@
+GeoBOS.hello={getVersion:function(e){GeoBOS.plugin.execute("HelloPlugin","getVersion",GeoBOS.getId(),"1 2",null,e)},getBuildTime:function(e){GeoBOS.plugin.execute("HelloPlugin","getBuildTime",GeoBOS.getId(),"",null,e)}};

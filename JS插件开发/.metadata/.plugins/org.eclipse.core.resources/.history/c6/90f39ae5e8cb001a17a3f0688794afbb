@@ -1,0 +1,25 @@
+{
+	"name": "FileSystem",
+	"description": "Simple web example application to demonstrate",
+	"package": "com.huawei.filesystem",
+	"version": "0.1.0",
+	"start_url": "index.html",
+	"icons": [
+		{
+			"name": "launcher",
+			"src": "res/img/appicon.png"
+		}
+	],
+	"developer": {
+		"name": "Example Developer",
+		"url": "http://www.huawei.com/",
+		"email": "developer@huawei.com"
+	},
+	"request-permissions": [
+		"atelier.permission.NOTIFICATION",
+		"atelier.permission.WRITE_EXTERNAL_STORAGE",
+		"atelier.permission.READ_EXTERNAL_STORAGE",
+		"atelier.permission.STORAGE_MANAGER"
+	],
+	"permission-level": "system"
+}

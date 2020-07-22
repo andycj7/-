@@ -1,0 +1,7 @@
+GeoBOS.filesystem = {
+		
+	init : function (cb) {
+		
+		GeoBOS.plugin.execute("FileSystemPlugin", "read", GeoBOS.getId(), '', null, cb);
+	}
+}

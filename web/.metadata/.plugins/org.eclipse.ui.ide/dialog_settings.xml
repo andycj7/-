@@ -24,4 +24,10 @@
 		<item value="org.polarion.eclipse.team.svn.connector.svnkit18:5.0.1.I20151028-1700"/>
 		<item value="org.polarion.eclipse.team.svn.connector:5.0.1.I20151028-1700"/>
 	</list>
+	<section name="NewWizardAction">
+		<item value="com.atelier.webproject.NewAtelierWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="com.atelier.webproject.category"/>
+		</list>
+	</section>
 </section>

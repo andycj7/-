@@ -1,0 +1,18 @@
+GeoBOS.filesystem = {
+	
+	init : function (call_back) {
+		GeoBOS.plugin.execute("FileSystemPlugin", "init", GeoBOS.getId(), '', null, call_back);
+	},
+	openFileOrFolderByName : function (name, call_back) {
+		GeoBOS.plugin.execute("FileSystemPlugin", "openFileOrFolderByName", GeoBOS.getId(), name, null, call_back);
+	},
+	openFileOrFolderByPath : function (path, call_back) {
+		GeoBOS.plugin.execute("FileSystemPlugin", "openFileOrFolderByPath", GeoBOS.getId(), path, null, call_back);
+	},
+	returnPreFolder : function (call_back) {
+		GeoBOS.plugin.execute("FileSystemPlugin", "returnPreFolder", GeoBOS.getId(), '', null, call_back);
+	}
+	searchFileOrFolderByName : function (name, call_back) {
+		GeoBOS.plugin.execute("FileSystemPlugin", "searchFileOrFolderByName", GeoBOS.getId(), name, null, call_back);
+	}
+}

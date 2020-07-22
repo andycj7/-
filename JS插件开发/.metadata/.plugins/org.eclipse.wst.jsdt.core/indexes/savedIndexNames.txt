@@ -1,0 +1,8 @@
+INDEX VERSION 1.3+C:\Users\Andy\Desktop\空天院\JS插件开发\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4118665372.index
+2512738324.index
+1840020322.index
+325049177.index
+3549777681.index
+1653779803.index
+1339037786.index

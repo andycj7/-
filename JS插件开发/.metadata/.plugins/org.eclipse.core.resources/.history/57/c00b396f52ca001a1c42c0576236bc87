@@ -1,0 +1,6 @@
+GeoBOS.hello = {
+		
+	read : function (cb) {
+		GeoBOS.plugin.execute("FileSystemPlugin", "read", GeoBOS.getId(), '', null, cb);
+	}
+}

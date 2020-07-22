@@ -1,0 +1,1 @@
+/usr/bin/c++.exe  -g -std=c++11  -Wl,--enable-auto-import CMakeFiles/FileOperation.dir/main.cpp.o  -o ../output/FileOperation.exe -Wl,--out-implib,../output/libFileOperation.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -L/cygdrive/c/Users/Andy/Desktop/空天院/JS插件开发/test-linux/./output -Wl,-Bstatic -lFileOperation -Wl,-Bdynamic 

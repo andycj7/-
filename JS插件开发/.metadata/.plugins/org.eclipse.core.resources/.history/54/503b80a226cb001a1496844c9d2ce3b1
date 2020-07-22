@@ -1,0 +1,37 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<title>Blank</title>
+<link rel="stylesheet" href="css/base.css">
+</head>
+
+<body>
+	<div class="title">Blank</div>
+	<div class="line"></div>
+	<div class="div-parent">
+		<div class="div-control">
+			<div class = "div-control-column">
+				<label>当前路径</label>
+				<label>文件名</label>	
+			</div>
+			<div>
+				<input></input>
+				<input></input>
+			</div>
+			<div>
+				<button>打开</button>
+				<button>搜索</button>
+			</div>
+			<button>返回</button>
+		</div>
+		<div id="div_display" class="div-child-2">
+		</div>
+	</div>
+</body>
+<script src="js/GeoBOS.min.js"></script>
+<script src="js/GeoBOS.filesystem.min.js"></script>
+<script src="js/index.js"></script>
+</html>

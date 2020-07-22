@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="installedFeatures">
+		<item value="com.atelier.feature.product:1.0.1"/>
+		<item value="org.eclipse.egit.gitflow.feature:4.1.1.201511131810-r"/>
+		<item value="org.eclipse.egit:4.1.1.201511131810-r"/>
+		<item value="org.eclipse.emf.common:2.11.1.v20160208-0816"/>
+		<item value="org.eclipse.emf.ecore:2.11.2.v20160208-0816"/>
+		<item value="org.eclipse.epp.mpc:1.4.1.v20150916-1928"/>
+		<item value="org.eclipse.help:2.1.2.v20160212-1500"/>
+		<item value="org.eclipse.jdt:3.11.2.v20160212-1500"/>
+		<item value="org.eclipse.jgit.http.apache:4.1.1.201511131810-r"/>
+		<item value="org.eclipse.jgit.pgm:4.1.1.201511131810-r"/>
+		<item value="org.eclipse.jgit:4.1.1.201511131810-r"/>
+		<item value="org.eclipse.platform:4.5.2.v20160212-1500"/>
+		<item value="org.eclipse.rcp:4.5.2.v20160212-1500"/>
+		<item value="org.eclipse.sdk:4.5.2.v20160212-1500"/>
+		<item value="org.eclipse.team.svn.nl1:3.0.0.I20150529-1700"/>
+		<item value="org.eclipse.team.svn.resource.ignore.rules.jdt:3.0.0.I20150529-1700"/>
+		<item value="org.eclipse.team.svn:3.0.2.I20151028-1700"/>
+		<item value="org.eclipse.tm.terminal.control.feature:4.1.0.201605131206"/>
+		<item value="org.eclipse.tm.terminal.feature:4.1.0.201605131206"/>
+		<item value="org.eclipse.tm.terminal.view.feature:4.1.0.201605131206"/>
+		<item value="org.polarion.eclipse.team.svn.connector.svnkit18:5.0.1.I20151028-1700"/>
+		<item value="org.polarion.eclipse.team.svn.connector:5.0.1.I20151028-1700"/>
+	</list>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Andy\Desktop\空天院\web\hello"/>
+			<item value="C:\Users\Andy\Desktop\空天院\web\videoplay"/>
+			<item value="C:\Users\Andy\Desktop\空天院\web\calculator"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>

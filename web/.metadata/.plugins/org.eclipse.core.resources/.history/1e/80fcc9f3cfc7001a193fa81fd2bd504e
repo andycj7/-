@@ -1,0 +1,39 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<title>Blank</title>
+<link rel="stylesheet" href="css/base.css">
+</head>
+
+<body>
+	<div class="title">Blank</div>
+	<div class="line"></div>
+	<br>
+	<button onclick="onCalculatorPlugin()">点击</button>
+	<br>
+	<p id = "p1">hello</p>
+	
+	<script>
+	function onMessageCallback(callbackId, success, msg, keepCallback){
+		
+		document.getElementById("p1").innerHTML = "callbackId:" + callbackId + "msg:" + msg;		
+	}
+	
+	function onCalculatorPlugin(){
+		document.getElementById("p1").innerHTML = "start";
+		atelier.plugin.onNativeMessage.addListener(onMessageCallback);
+		atelier.plugin.exec("CalculatorPlugin","add", "2", "hello",
+				function(isSuccessed){
+					document.getElementById("p1").innerHTML = "Success" = isSuccessed;
+				}	
+		);
+	}
+	</script>
+</body>
+
+
+
+</html>

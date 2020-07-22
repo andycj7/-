@@ -1,0 +1,22 @@
+{
+	"name": "HelloEmss",
+	"description": "Simple web example application to demonstrate",
+	"package": "com.huawei.helloemss",
+	"version": "0.1.0",
+	"start_url": "index.html",
+	"icons": [
+		{
+			"name": "launcher",
+			"src": "res/img/appicon.png"
+		}
+	],
+	"developer": {
+		"name": "Example Developer",
+		"url": "http://www.huawei.com/",
+		"email": "developer@huawei.com"
+	},
+	"request-permissions": [
+		"atelier.permission.NOTIFICATION"
+	],
+	"permission-level": "system"
+}

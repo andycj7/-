@@ -1,0 +1,147 @@
+
+(function () {
+	GeoBOS.filesystem.init(function(err){
+		if (err) {
+			console.log(err.message);
+		} else {
+			document.getElementById("current_path").value = arguments[1];
+			var div_display_folder = document.getElementById("div_display_folder");
+			for(var i = 2; i < arguments.length; i++) {
+				var temp_ul = document.createElement("ul");
+				temp_ul.innerHTML = arguments[i];
+				temp_ul.onclick = openFileOrFolderByName;
+				div_display_folder.appendChild(temp_ul);
+			}
+		}
+	});
+})();
+
+var current_display_status = "div_display_folder";
+
+function openFileOrFolderByName() {
+	GeoBOS.filesystem.openFileOrFolderByName(this.innerHTML, function(err){
+		if(err) {
+			console.log(err.message);
+		} else {
+			if(arguments[1] == "folder") {
+				setDivDisplayFolder();
+				document.getElementById("current_path").value = arguments[2];
+				var div_display_folder = document.getElementById("div_display_folder");
+				div_display_folder.innerHTML = "";
+				for(var i = 3; i < arguments.length; i++) {
+					var temp_ul = document.createElement("ul");
+					temp_ul.innerHTML = arguments[i];
+					temp_ul.onclick = openFileOrFolderByName;
+					div_display_folder.appendChild(temp_ul);
+				}
+			} else if(arguments[1] == "file") {
+				setDivDisplayFile();
+				document.getElementById(current_display_status).innerHTML = arguments[2];
+			}
+		}
+	});
+}
+
+function onOpen() {
+	GeoBOS.filesystem.openFileOrFolderByPath(this.value, function(err){
+		if (err) {
+			console.log(err.message);
+		} else {
+			if(arguments[1] == "folder") {
+				setDivDisplayFolder();
+				document.getElementById("current_path").value = arguments[2];
+				var div_display_folder = document.getElementById("div_display_folder");
+				div_display_folder.innerHTML = "";
+				for(var i = 3; i < arguments.length; i++) {
+					var temp_ul = document.createElement("ul");
+					temp_ul.innerHTML = arguments[i];
+					temp_ul.onclick = openFileOrFolderByName;
+					div_display_folder.appendChild(temp_ul);
+				}
+			} else if(arguments[1] == "file") {
+				setDivDisplayFile();
+				document.getElementById(current_display_status).innerHTML = arguments[2];
+			}
+		}
+	});
+}
+
+function onReturn() {
+	
+	if(current_display_status != "div_display_folder"){
+		
+		setDivDisplayFolder();
+		return;
+	}
+	GeoBOS.filesystem.returnPreFolder(function(err){
+		if (err) {
+			console.log(err.message);
+		} else {
+			document.getElementById("current_path").value = arguments[1];
+			var div_display_folder = document.getElementById("div_display_folder");
+			div_display_folder.innerHTML = "";
+			for(var i = 2; i < arguments.length; i++) {
+				var temp_ul = document.createElement("ul");
+				temp_ul.innerHTML = arguments[i];
+				temp_ul.onclick = openFileOrFolderByName;
+				div_display_folder.appendChild(temp_ul);
+			}
+		}
+	});
+}
+
+function onSearch() {
+	if(current_display_status != "div_display_search_result")
+		setDivDisplaySearchResult();
+	var search_name = document.getElementById("search_name").value;
+	if(search_name == "")
+		return;
+	GeoBOS.filesystem.searchFileOrFolderByName(search_name, function(){
+		if(err)
+			console.log(err.message);
+		else {
+			var div_display_search_result = document.getElementById(current_display_status);
+			div_display_search_result.innerHTML = "";
+			for(var i = 1; i < arguments.length; i++) {
+				var temp_ul = document.createElement("ul");
+				temp_ul.innerHTML = arguments[i];
+				//temp_ul.onclick = openFileOrFolderByPath;
+				div_display_search_result.appendChild(temp_ul);
+			}
+		}
+	})
+}
+
+//界面的切换
+
+//设置三种显示界面
+
+function setDivDisplayFolder() {
+	
+	document.getElementById(current_display_status).style.display = "none";
+	current_display_status = "div_display_folder";
+	document.getElementById(current_display_status).style.display = "inline";
+	document.getElementById("button_open").style.disabled = "false";
+	document.getElementById("button_search").style.disabled = "false";
+	document.getElementById("button_return").style.disabled = "false";
+}
+
+function setDivDisplayFile() {
+	
+	document.getElementById(current_display_status).style.display = "none";
+	current_display_status = "div_display_file";
+	document.getElementById(current_display_status).style.display = "inline";
+	document.getElementById("button_open").style.disabled = "true";
+	document.getElementById("button_search").style.disabled = "true";
+	document.getElementById("button_return").style.disabled = "false";
+}
+
+function setDivDisplaySearchResult() {
+	
+	document.getElementById(current_display_status).style.display = "none";
+	current_display_status = "div_display_search_result";
+	document.getElementById(current_display_status).style.display = "inline";
+	document.getElementById("button_open").style.disabled = "ture";
+	document.getElementById("button_search").style.disabled = "false";
+	document.getElementById("button_return").style.disabled = "false";
+}

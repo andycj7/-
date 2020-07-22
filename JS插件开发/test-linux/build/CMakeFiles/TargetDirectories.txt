@@ -1,0 +1,3 @@
+/cygdrive/c/Users/Andy/Desktop/空天院/JS插件开发/test-linux/build/CMakeFiles/rebuild_cache.dir
+/cygdrive/c/Users/Andy/Desktop/空天院/JS插件开发/test-linux/build/CMakeFiles/FileOperation.dir
+/cygdrive/c/Users/Andy/Desktop/空天院/JS插件开发/test-linux/build/CMakeFiles/edit_cache.dir

@@ -1,0 +1,12 @@
+{
+	"plugins": [
+		{
+			"name": "prebuilt-baseplugin",
+			"lib_path": "lib/libbase_plugin.so"
+		},
+		{
+			"name": "FileSystemPlugin",
+			"lib_path": "lib/libFileSystemPlugin.so"
+		}
+	]
+}

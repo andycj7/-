@@ -1,0 +1,7 @@
+GeoBOS.hello = {
+		
+	read : function (cb) {
+		document.getElementById("content").innerHTML = "开始执行";
+		GeoBOS.plugin.execute("FileSystemPlugin", "read", GeoBOS.getId(), '', null, cb);
+	}
+}

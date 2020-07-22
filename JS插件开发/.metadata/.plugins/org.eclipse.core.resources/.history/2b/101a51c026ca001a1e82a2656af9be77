@@ -1,0 +1,50 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<title>VideoPlay</title>
+<link rel="stylesheet" href="css/base.css">
+</head>
+
+<body>
+	<div class="title">video play</div>
+	<div class="line"></div>
+	<div class="body">
+		<div id="divParentLogin" class="div-parent-login">
+			<div class="div-child-login">
+				<label class="label-login">账号:</label> <input id="inputUserName"
+					class="input-login" type="text" placeholder="请输入账号"></input>
+			</div>
+			<div class="div-child-login">
+				<label class="label-login">密码:</label> <input id="inputPassWord"
+					class="input-login" type="password" placeholder="请输入密码"></input>
+			</div>
+			<div class="div-child-login">
+				<button class="button-login" onclick="on_login()">登录</button>
+			</div>
+		</div>
+
+		<div id="divParentPlay" class="div-parent-play">
+			<div class="div-child-video">
+				<video id="videoPlay" class="video-play" preload="auto">
+					<source src="./res/video/2.mp4" type="video/mp4">
+				</video>
+			</div>
+			<div class="div-child-control">
+				<button class="button-play-1" onclick="on_play()">开始播放</button>
+				<button class="button-play-1" onclick="on_pause()">暂停播放</button>
+				<button class="button-play-1" onclick="on_finish()">结束播放</button>
+			</div>
+			<div class="div-child-control">
+				<button class="button-play-2" onclick="on_set_mute(true)">静音</button>
+				<button class="button-play-2" onclick="on_set_mute(false)">取消静音</button>
+				<button class="button-play-2" onclick="on_set_volume(true)">音量+</button>
+				<button class="button-play-2" onclick="on_set_volume(false)">音量-</button>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/index.js"></script>
+</html>

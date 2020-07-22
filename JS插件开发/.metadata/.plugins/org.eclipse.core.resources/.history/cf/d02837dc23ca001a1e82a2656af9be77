@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+}
+
+.title {
+	height: 48px;
+	font-size: 16px;
+	line-height: 48px;
+	text-align: center;
+	color: rgba(0, 0, 0, .85);
+	background-color: #fafafa;
+}
+
+.line {
+	width: 100%;
+	height: 1px;
+	background-color: rgb(204, 204, 204);
+}
+
+.div-parent {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+}
+
+.div-child-1 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.div-child-2 {
+	
+}
+
+.label {
+	width: 16%; 
+	height: 30px; 
+	text-align: center;
+	line-height: 30px;
+	font-size: 10px;
+}
+
+.textare-path {
+	width: 60%;
+	height: 30px; 
+	overflow: hidden;
+	line-height: 20px;
+	font-size: 15px;
+	font-size: 10px;
+}
+
+.button {
+	width: 12%;
+	height: 30px;
+	font-size: 10px;
+}
+
+.textare-file {
+	width: 100%;
+	height: 30px; 
+	overflow: hidden;
+	border: none;
+	line-height: 35px;
+	font-size: 15px;
+}

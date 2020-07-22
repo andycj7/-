@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+.././thirdparty/file_operation.h
+stdio.h
+-
+string
+-
+vector
+-
+
+/cygdrive/c/Users/Andy/Desktop/空天院/JS插件开发/test-linux/main.cpp
+stdio.h
+-
+stdlib.h
+-
+file_operation.h
+-
+iostream
+-
+

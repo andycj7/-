@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;filesystem/js/GeoBOS.hello.min.js&apos; to &apos;GeoBOS.filesystem.min.js&apos;" description="Rename resource &apos;GeoBOS.hello.min.js&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="js/GeoBOS.hello.min.js" name="GeoBOS.filesystem.min.js" stamp="1595226878706" updateReferences="true"/>
+</session>
