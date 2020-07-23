@@ -1,0 +1,44 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<title>FileSyetem</title>
+<link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+	<div class="title">Blank</div>
+	<div class="line"></div>
+	<div class="div-parent">
+		<div class="div-control">
+			<div class = "div-control-column">
+				<label>当前路径</label>
+				<label>文件名</label>	
+			</div>
+			<div class = "div-control-column">
+				<input id = "current_path"></input>
+				<input id = "search_name"></input>
+			</div>
+			<div class = "div-control-column">
+				<button id = "button_open" onclick="onOpen()">打开</button>
+				<button id = "button_search" onclick="onSearch()">搜索</button>
+			</div>
+			<button id = "button_return" onclick="onReturn()">返回</button>
+		</div>
+		<div id="div_display_folder" class="div-display-folder">
+			文件内容显示：<br>
+			<textarea cols="40"></textarea>
+		</div>
+		<div id="div_display_file" class="div-display-file">
+			文件内容显示
+		</div>
+		<div id="div_display_search_result" class="div-display-search-result">
+			文件搜索结果显示
+		</div>
+	</div>
+</body>
+<script src="js/GeoBOS.min.js"></script>
+<script src="js/GeoBOS.filesystem.min.js"></script>
+<script src="js/index.js"></script>
+</html>

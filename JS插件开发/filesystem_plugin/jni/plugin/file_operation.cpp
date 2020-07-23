@@ -11,7 +11,7 @@ FileOperation::FileOperation(char *root_path) {
 
     root_path_ = NULL;
     SetRootPath(root_path);
-    SearchFileList();
+    SearchFileOrFolderList();
 }
 
 FileOperation::~FileOperation(){
@@ -49,7 +49,7 @@ char *FileOperation::OpenFileOrFolderByPath(const char *file_or_folder_path){
     if(S_ISDIR(file_info.st_mode)) {
         //如果打开的是目录，那么就需要跳转到目录
         SetRootPath(file_or_folder_path);
-        SearchFileList();
+        SearchFileOrFolderList();
         return NULL;
     } else if(S_ISREG(file_info.st_mode)) {
         //打开文件
@@ -60,7 +60,8 @@ char *FileOperation::OpenFileOrFolderByPath(const char *file_or_folder_path){
     }
 }
 
-bool FileOperation::SearchFileOrFolderByName(const char *file_or_folder_name, const char *root_path, vector<string> &result){
+bool FileOperation::SearchFileOrFolderByName(const char *file_or_folder_name, const char *root_path, 
+                                             vector<string> &file_result, vector<string> &folder_result){
 
     DIR *dir = opendir(root_path);
     if(dir == NULL){
@@ -77,14 +78,14 @@ bool FileOperation::SearchFileOrFolderByName(const char *file_or_folder_name, co
         if(ptr->d_type == 4) {
            
             if(strcmp(ptr->d_name, file_or_folder_name) == 0)
-                result.push_back(temp_folder_path);
+                folder_result.push_back(temp_folder_path);
             //进入下一层目录进行递归
             if(strcmp(ptr->d_name, ".") != 0 && strcmp(ptr->d_name, "..") !=0)
-                SearchFileOrFolderByName(file_or_folder_name, temp_folder_path.c_str(), result);
+                SearchFileOrFolderByName(file_or_folder_name, temp_folder_path.c_str(), file_result, folder_result);
             //logAtelier("onMessage-log22 folder %s %s", ptr->d_name, file_or_folder_name);
         } else  {
             if(strcmp(ptr->d_name, file_or_folder_name) == 0)
-                result.push_back(temp_folder_path);
+                file_result.push_back(temp_folder_path);
             //logAtelier("onMessage-log22 file %s %s", ptr->d_name, file_or_folder_name);
         } 
         
@@ -100,7 +101,11 @@ bool FileOperation::ReturnPreFolder(){
     char *ptr = root_path_ + length;
     //字符串中如果没有'/'，防止指针越界
     while(ptr != root_path_ && *ptr != '/') ptr--; 
-    *ptr = '\0';
+    //当退到根文件目录时不删除斜杠(/)
+    if(ptr == root_path_)
+        *(++ptr) = '\0';
+    else
+        *ptr = '\0';
  
     //拷贝到新的内存路径中
     char *temp = new char[strlen(root_path_) + 1];
@@ -108,7 +113,7 @@ bool FileOperation::ReturnPreFolder(){
     //这里释放法内存的多少，是由new的时候标记的
     delete [] root_path_;
     root_path_ = temp;
-    return SearchFileList();
+    return SearchFileOrFolderList();
 }
 
 char *FileOperation::ReadFileByPath(const char *file_path){
@@ -129,16 +134,6 @@ char *FileOperation::ReadFileByPath(const char *file_path){
     return read_content;
 }
 
-/*********************************************
- * FunctionName: WriteFile
- * Purpose: 把write_content写入root_path_文件
- *          夹下，指定文件名文件
- * Parameter:
- *      file_name:文件名，包含文件类型，不能为空
- *      write_content：写入文件的内容
- *      type：写入的方式，即是否覆盖原有内容
- * Return: true：成功；false：失败
-**********************************************/
 bool FileOperation::WriteFile(const char *file_name, const char *write_content, bool type){
     
     if(file_name == NULL)
@@ -188,10 +183,12 @@ void FileOperation::CutFile(const char *src_path, const char *dst_path){
 
 }
 
-bool FileOperation::SearchFileList(){
+bool FileOperation::SearchFileOrFolderList(){
 
     if(!file_list_.empty())
         file_list_.clear();
+    if(!folder_list_.empty())
+        folder_list_.clear();
     if(root_path_ == NULL)
         cout << "根文件路径为空" << endl; 
     DIR *dir = opendir(root_path_); //不需要delete会出错 
@@ -202,8 +199,13 @@ bool FileOperation::SearchFileList(){
     }
     struct dirent *ptr; //不需要delete会出错
     while((ptr = readdir(dir)) != NULL){
-
-        file_list_.push_back(ptr->d_name);
+        //sdcard的类型为10，符号链接
+        //logAtelier("onMessage-log-type %s %d", ptr->d_name, ptr->d_type);
+        if(ptr->d_type == 4){
+            if(strcmp(ptr->d_name, ".") != 0 && strcmp(ptr->d_name, "..")!= 0)
+                folder_list_.push_back(ptr->d_name);
+        } else
+            file_list_.push_back(ptr->d_name);
     }
     closedir(dir);
     return true;

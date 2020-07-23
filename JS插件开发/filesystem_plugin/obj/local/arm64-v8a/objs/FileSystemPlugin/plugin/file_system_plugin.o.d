@@ -133,7 +133,33 @@ C:/Users/Andy/Desktop/空天院/JS插件开发/filesystem_plugin/obj/local/arm64-v8a/ob
  thirdparty/rapidjson/writer.h thirdparty/rapidjson/internal/dtoa.h \
  thirdparty/rapidjson/internal/itoa.h \
  thirdparty/rapidjson/internal/itoa.h thirdparty/rapidjson/stringbuffer.h \
- thirdparty/rapidjson/stringbuffer.h
+ thirdparty/rapidjson/stringbuffer.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/atelier_plugin/atelier_plugin_common.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/utils/Log.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/log/log.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/android/log.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/log/log_id.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/log/log_main.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/log/log_radio.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/log/log_read.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/fcntl.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/linux/fadvise.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/linux/fcntl.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/asm/fcntl.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/asm-generic/fcntl.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/linux/uio.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/log/log_time.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/log/log_safetynet.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/log/log_system.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/log/uio.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/sys/uio.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/frameworks/api/include/gui/SurfaceAtelier.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/utils/RefBase.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/libcxx/include/atomic \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/utils/LightRefBase.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/utils/StrongPointer.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/utils/TypeHelpers.h \
+ E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/atelier_plugin/atelier_plugin.h
 
 C:/Users/Andy/Desktop/空天院/JS插件开发/filesystem_plugin/jni/plugin/file_system_plugin.h:
 
@@ -416,3 +442,55 @@ thirdparty/rapidjson/internal/itoa.h:
 thirdparty/rapidjson/stringbuffer.h:
 
 thirdparty/rapidjson/stringbuffer.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/atelier_plugin/atelier_plugin_common.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/utils/Log.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/log/log.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/android/log.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/log/log_id.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/log/log_main.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/log/log_radio.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/log/log_read.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/fcntl.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/linux/fadvise.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/linux/fcntl.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/asm/fcntl.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/asm-generic/fcntl.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/linux/uio.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/log/log_time.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/log/log_safetynet.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/log/log_system.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/log/uio.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/sys/uio.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/frameworks/api/include/gui/SurfaceAtelier.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/utils/RefBase.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/libcxx/include/atomic:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/utils/LightRefBase.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/utils/StrongPointer.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/emss/system/core/include/utils/TypeHelpers.h:
+
+E:/third_party_library/emss-ndk/build//../platforms/emss-1/arch-arm64/usr/include/atelier_plugin/atelier_plugin.h:

@@ -17,11 +17,13 @@ public:
 
     bool SetRootPath(const char *root_path);  
     vector<string> GetFileList() { return file_list_; }
+    vector<string> GetFolderList() { return folder_list_; }
     char *GetRootPath() { return root_path_; } 
 
     char *OpenFileOrFolderByName(const char *file_or_folder_name);
     char *OpenFileOrFolderByPath(const char *file_or_folder_path); 
-    bool SearchFileOrFolderByName(const char *file_or_folder_name, const char *root_path, vector<string> &result);
+    bool SearchFileOrFolderByName(const char *file_or_folder_name, const char *root_path, 
+                                  vector<string> &file_result, vector<string> &folder_result);
     bool ReturnPreFolder();
 
     //读写所操作的文件，都在当前文件夹下
@@ -34,9 +36,10 @@ public:
     void DeleteFile(const char *file_name);
 
 private:
-    bool SearchFileList();                  //搜索路径下文件名
+    bool SearchFileOrFolderList();                  //搜索路径下文件名
     char *root_path_;                       //当前文件夹绝对路径
-    vector<string> file_list_;              //当前文件夹目录文件名
+    vector<string> file_list_;              //当前目录中的文件名
+    vector<string> folder_list_;            //当前目录中的文件夹名
 };
 
 

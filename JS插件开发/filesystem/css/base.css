@@ -50,3 +50,11 @@ body {
 .div-display-search-result {
 	display: none;
 }
+
+.li-folder {
+	color: red;
+}
+
+.li-file {
+	color: black;
+}
